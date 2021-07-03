@@ -165,7 +165,6 @@ export default function InitTransferMoneyView() {
                     </div>
                 </div>
                 <div className="self-end">
-                    <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5  hover:bg-hover-button-color transition-all" onClick={() => history.push("/")}>Quay lại</button>
                     <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5 hover:bg-hover-button-color transition-all" onClick={() => history.push("/confirmtransfermoney")}>Xác nhận</button>
                 </div>
             </div>

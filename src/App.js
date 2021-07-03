@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomeView from './View/HomeView';
+import LoginView from './View/LoginView';
 import InitTransferMoneyView from './View/InitTransferMoneyView';
 import ConfirmTransferMoneyView from './View/ConfirmTransferMoneyView';
 import ResultTransferMoneyView from './View/ResultTransferMoneyView';
@@ -19,7 +19,7 @@ function App() {
           <ResultTransferMoneyView />
         </Route>
         <Route path="/">
-          <HomeView />
+          <LoginView />
         </Route>
       </Switch>
     </BrowserRouter>
