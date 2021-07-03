@@ -1,0 +1,60 @@
+.signup-step-info {
+  /* position: */
+
+  /* size: */
+
+  /* style: */
+  color: var(--color-green-bold-1);
+
+  & > h1 {
+    /* position: */
+  
+    /* size: */
+  
+    /* style: */
+    font-weight: 700;
+  }
+
+  &__step {
+
+    display: flex;
+
+    margin-top: calc(3.2 * var(--rem));
+    & > p {
+      font-weight: 700;
+      margin-right: calc(1 * var(--rem));
+    }
+    & > div {
+      // height: 1px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      // height: 100%;
+    }
+    & > div::before {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background-color: var(--color-green-bold-1);
+    }
+  }
+
+  & > p {
+    /* position: */
+  
+    /* size: */
+  
+    /* style: */
+    font-style: italic;
+    font-weight: 400;
+
+    & > span {
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    & > span:hover {
+      text-decoration: underline;
+    }
+  }
+}

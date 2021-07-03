@@ -4,6 +4,7 @@ import LoginView from './View/LoginView';
 import InitTransferMoneyView from './View/InitTransferMoneyView';
 import ConfirmTransferMoneyView from './View/ConfirmTransferMoneyView';
 import ResultTransferMoneyView from './View/ResultTransferMoneyView';
+import SignupStepOneView from './View/SignupViews/SignupStepOneView/index';
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
         </Route>
         <Route exact path="/resulttransfermoney">
           <ResultTransferMoneyView />
+        </Route>
+        <Route exact path="/signup-step-1">
+          <SignupStepOneView />
+        </Route>
+        <Route exact path="/signup-step-2">
+          <SignupStepOneView />
         </Route>
         <Route path="/">
           <LoginView />
