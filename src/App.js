@@ -1,14 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomeView from './View/HomeView';
-import InitTransferMoney from './View/InitTransferMoney';
+import InitTransferMoneyView from './View/InitTransferMoneyView';
+import ConfirmTransferMoneyView from './View/ConfirmTransferMoneyView';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/inittransfermoney">
-          <InitTransferMoney />
+          <InitTransferMoneyView />
+        </Route>
+        <Route exact path="/confirmtransfermoney">
+          <ConfirmTransferMoneyView />
         </Route>
         <Route path="/">
           <HomeView />
