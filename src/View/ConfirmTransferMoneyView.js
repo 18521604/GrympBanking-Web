@@ -5,11 +5,12 @@ import IconHome from '@material-ui/icons/Home';
 import IconSetting from '@material-ui/icons/Settings';
 import logoutIcon from "../assets/icons/logout.png";
 import avatar from '../assets/img/IMG_7904.JPG';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Menu } from '../Components/Menu';
 import { HeaderBar } from '../Components/HeaderBar';
 
 export default function ConfirmTransferMoneyView(){
+    let history = useHistory();
     const openMenu = () => {
         let element = document.getElementById('list-menu');
         if (element.style.display === "none")
@@ -165,8 +166,8 @@ export default function ConfirmTransferMoneyView(){
                     </div>
                 </div>
                 <div className="self-end">
-                        <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5  hover:bg-hover-button-color transition-all">Quay lại</button>
-                        <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5 hover:bg-hover-button-color transition-all">Xác nhận</button>
+                        <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5  hover:bg-hover-button-color transition-all" onClick={() => history.push("/inittransfermoney")}>Quay lại</button>
+                        <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5 hover:bg-hover-button-color transition-all" onClick={() => history.push("/resulttransfermoney")}>Xác nhận</button>
                 </div>
             </div>
         </div>
