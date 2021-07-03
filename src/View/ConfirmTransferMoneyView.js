@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { RadioGroup, FormControlLabel, FormControl, Radio, IconButton } from '@material-ui/core';
+import React from 'react';
+import { IconButton } from '@material-ui/core';
 import IconMenu from '@material-ui/icons/Menu';
 import IconHome from '@material-ui/icons/Home';
 import IconSetting from '@material-ui/icons/Settings';
@@ -8,31 +8,8 @@ import avatar from '../assets/img/IMG_7904.JPG';
 import { Link } from 'react-router-dom';
 import { Menu } from '../Components/Menu';
 import { HeaderBar } from '../Components/HeaderBar';
-import arrowIcon from '../assets/icons/arrow.png';
-import communityIcon from '../assets/icons/community.png';
 
-export default function InitTransferMoney() {
-    const [newPerson, setNewPerson] = useState('');
-    const [statusTransfer, setStatusTransfer] = useState('');
-    const [isShowText, setIsShowText] = useState(false);
-    const [isShowStatusTransfer, setIsShowStatusTransfer] = useState(false);
-
-    function changeStatePerson(){
-        if (newPerson === "newPerson")
-            setIsShowStatusTransfer(true);
-        else
-            setIsShowStatusTransfer(false);
-    }
-    function changeStateTransfer() {
-        if (statusTransfer === "toBank")
-            setIsShowText(true);
-        else
-            setIsShowText(false);
-    }
-    useEffect(() => {
-        changeStateTransfer();
-        changeStatePerson();
-    })
+export default function ConfirmTransferMoneyView(){
     const openMenu = () => {
         let element = document.getElementById('list-menu');
         if (element.style.display === "none")
@@ -70,11 +47,11 @@ export default function InitTransferMoney() {
                 <div className="md:w-11/20 w-11/12 flex flex-col mt-6 text-xl">
                     <span className="font-bold text-white mb-5 font-title">Chuyển tiền</span>
                     <div className="flex flex-row w-full justify-center text-white">
-                        <div className="w-7 h-6 bg-button-color rounded-full flex items-center justify-center">
+                        <div className="w-7 h-6 bg-group-color rounded-full flex items-center justify-center">
                             <span className="text-sm">1</span>
                         </div>
                         <div className="w-1/2 h-px bg-white self-center" />
-                        <div className="w-7 h-6 bg-group-color rounded-full flex items-center justify-center">
+                        <div className="w-7 h-6 bg-button-color rounded-full flex items-center justify-center">
                             <span className="text-sm">2</span>
                         </div>
                         <div className="w-1/2 h-px bg-white self-center" />
@@ -88,77 +65,101 @@ export default function InitTransferMoney() {
                         <span className="text-sm font-body">Kết quả</span>
                     </div>
 
-                    <div className="w-full bg-group-color rounded-lg text-white py-2 my-3 text-base font-body flex justify-center">
-                        <FormControl className="md:w-5/6 w-11/12">
-                            <RadioGroup row className="flex flex-row justify-between" onChange={(e) => {
-                                setNewPerson(e.target.value);
-                            }}>
-                                <FormControlLabel value="newPerson" control={<Radio style={{ color: "white" }} size="small" />} label="Người thụ hưởng mới"></FormControlLabel>
-                                <FormControlLabel value="oldPerson" control={<Radio style={{ color: "white" }} size="small" />} label="Người thụ hưởng đã lưu"></FormControlLabel>
-                            </RadioGroup>
-                        </FormControl>
-                    </div>
-                    <img src={arrowIcon} alt="arrowIcon" className={"w-6 justify-self-center self-center " + (isShowStatusTransfer ? "" : "hidden")}></img>
-
-                    <div className={"w-full bg-group-color rounded-lg text-white py-2 my-3 text-base font-body flex justify-center " + (isShowStatusTransfer ? "" : "hidden")}>
-                        <FormControl className="md:w-5/6 w-11/12">
-                            <RadioGroup row className="flex flex-row justify-between" onChange={(e) => {
-                                setStatusTransfer(e.target.value)
-                            }}>
-                                <FormControlLabel value="toBank" control={<Radio style={{ color: "white" }} size="small" />} label="Chuyển đến tài khoản ngân hàng"></FormControlLabel>
-                                <FormControlLabel value="toATM" control={<Radio style={{ color: "white" }} size="small" />} label="Chuyển đến thẻ ATM"></FormControlLabel>
-                            </RadioGroup>
-                        </FormControl>
-                    </div>
-                    <img src={arrowIcon} alt="arrowIcon" className={"w-6 justify-self-center self-center " + (isShowText ? "": "hidden")}></img>
-
-                    <div className={"" + (isShowText ? "block": "hidden")}>
-                        <div className="w-full bg-group-color rounded-lg text-white py-3 md:py-5 my-3 font-body text-sm space-y-3 flex flex-col items-center">
+                    <div>
+                        <div className="w-full bg-group-color rounded-lg text-white pb-3 md:pb-5 pt-2 md:pt-3 my-3 font-body text-sm space-y-4 flex flex-col items-center">
+                            <div className="flex w-full justify-start font-bold text-base pl-4">
+                                <text>Thông tin người chuyển</text>
+                            </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
                                 <span className="text-base text-secondtext-color w-5/12">Tài khoản nguồn</span>
-                                <select name="listAccounts" id="listAccounts" className="w-7/12 bg-white text-black outline-none p-2 rounded-2xl">
-                                    <option value="1">TK chính: 256325642536</option>
-                                </select>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">2153265425</text>
+                                </div>
                             </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
                                 <span className="text-base text-secondtext-color w-5/12">Họ tên người gửi</span>
-                                <text className="text-white">Nguyễn Thanh Tuấn</text>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">Nguyễn Thanh Tuấn</text>
+                                </div>
                             </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
                                 <span className="text-base text-secondtext-color w-5/12">Số dư khả dụng</span>
-                                <text className="text-white">8.000.000 VND</text>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">8.000.000 VND</text>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="w-full bg-group-color rounded-lg text-white md:py-5 py-3 mb-3 font-body text-sm space-y-3 flex flex-col items-center">
+                        <div className="w-full bg-group-color rounded-lg text-white pb-3 md:pb-5 pt-2 md:pt-3 my-3 font-body text-sm space-y-4 flex flex-col items-center">
+                            <div className="flex w-full justify-start font-bold text-base pl-4">
+                                <text>Thông tin người hưởng</text>
+                            </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
                                 <span className="text-base text-secondtext-color w-5/12">Ngân hàng TK thụ hưởng</span>
-                                <div className="w-7/12 flex flex-row bg-white text-black outline-none px-2 md:py-1.5 py-2 rounded-2xl">
-                                    <input className="w-11/12 outline-none"></input>
-                                    <img src={communityIcon} alt="community icon" className="w-1/12" />
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">Vietcombank</text>
                                 </div>
                             </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
                                 <span className="text-base text-secondtext-color w-5/12">Tài khoản thụ hưởng</span>
-                                <input className="w-7/12 flex flex-row bg-white text-black outline-none px-2 py-2 rounded-2xl" />
-                            </div>
-                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
-                                <span className="text-base text-secondtext-color w-5/12">Tên tài khoản thụ hưởng</span>
-                                <input className="w-7/12 flex flex-row bg-white text-black outline-none px-2 py-2 rounded-2xl" />
-                            </div>
-                        </div>
-
-                        <div className="w-full bg-group-color rounded-lg text-white md:py-5 py-3 mb-3 font-body text-sm space-y-3 flex flex-col items-center">
-                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
-                                <span className="text-base text-secondtext-color w-5/12">Số tiền</span>
-                                <div className="w-7/12 flex flex-row bg-white text-black outline-none px-2 py-2 rounded-2xl items-center">
-                                    <input className="w-11/12 outline-none"></input>
-                                    <span className="w-1/12 text-icon-color md:mr-0 mr-3">VND</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">21536589438</text>
                                 </div>
                             </div>
                             <div className="md:w-5/6 w-11/12 flex flex-row items-center">
-                                <span className="text-base text-secondtext-color w-5/12">Nội dung</span>
-                                <textarea row="4" className="w-7/12 flex flex-row bg-white text-black outline-none px-2 py-2 rounded-2xl" />
+                                <span className="text-base text-secondtext-color w-5/12">Tên người hưởng</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">Nguyễn A</text>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-full bg-group-color rounded-lg text-white pb-3 md:pb-5 pt-2 md:pt-3 my-3 font-body text-sm space-y-4 flex flex-col items-center">
+                            <div className="flex w-full justify-start font-bold text-base pl-4">
+                                <text>Thông tin giao dịch</text>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Ngày giao dịch</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">10/7/2021</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Số tiền</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">5.000.000 VND</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Số tiềN bằng chữ</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">Năm triệu đồng chẵn</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Nội dung chuyển tiền</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">Nguyễn Thanh Tuấn chuyển tiền</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Phí giao dịch</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">11.100 VND</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Số điện thoại nhận mã OTP</span>
+                                <div className="w-7/12 justify-end flex">
+                                    <text className="text-white">0375475***</text>
+                                </div>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center justify-center">
+                                <span className="text-base text-white font-bold">Mã giao dịch (OTP) đã được gởi đến số điện thoại của quý khách!</span>
+                            </div>
+                            <div className="md:w-5/6 w-11/12 flex flex-row items-center">
+                                <span className="text-base text-secondtext-color w-5/12">Mã OTP</span>
+                                <input className="w-7/12 flex flex-row bg-white text-black outline-none px-2 py-2 rounded-2xl" />
                             </div>
                         </div>
                     </div>
