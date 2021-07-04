@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IconButton } from '@material-ui/core';
 import IconMenu from '@material-ui/icons/Menu';
 import IconHome from '@material-ui/icons/Home';
@@ -18,6 +18,11 @@ export default function ConfirmTransferMoneyView() {
         else
             element.style.display = "none";
     }
+
+    
+    useEffect(()=>{
+        document.title="Chuyển tiền thành công"
+    }, [])
 
     return (
         <div className="w-full flex md:flex-row flex-col">

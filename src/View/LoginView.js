@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CoverLogin from '../assets/img/CoverLogin.png'
 import CapchaImage from '../assets/img/capcha.png';
 import PhoneIcon from '../assets/icons/phone.png';
@@ -7,6 +7,9 @@ import { Link, useHistory } from 'react-router-dom';
 
 export default function LoginView(){
     let history = useHistory();
+    useEffect(() => {
+        document.title="Đăng nhập"
+    }, [])
     return(
         <div className="flex bg-background-color w-full min-h-screen justify-center items-center">
             <div className="flex flex-row md:w-8/12 w-5/6">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IconButton } from '@material-ui/core';
 import IconMenu from '@material-ui/icons/Menu';
 import IconHome from '@material-ui/icons/Home';
@@ -18,6 +18,10 @@ export default function ConfirmTransferMoneyView(){
         else
             element.style.display = "none";
     }
+
+    useEffect(()=>{
+        document.title="Xác nhận chuyển tiền"
+    }, [])
 
     return (
         <div className="w-full flex md:flex-row flex-col">
@@ -167,7 +171,7 @@ export default function ConfirmTransferMoneyView(){
                 </div>
                 <div className="self-end">
                         <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5  hover:bg-hover-button-color transition-all" onClick={() => history.push("/inittransfermoney")}>Quay lại</button>
-                        <button className="bg-button-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5 hover:bg-hover-button-color transition-all" onClick={() => history.push("/resulttransfermoney")}>Xác nhận</button>
+                        <button className="bg-group-color text-white py-1 px-6 rounded-lg outline-none mr-5 my-5 hover:bg-hover-group-color transition-all" onClick={() => history.push("/resulttransfermoney")}>Xác nhận</button>
                 </div>
             </div>
         </div>
