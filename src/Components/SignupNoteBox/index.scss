@@ -1,3 +1,5 @@
+@import '../../assets/sass/variables';
+
 .signup-note {
   /* position: */
 
@@ -46,6 +48,10 @@
       /* style: */
       font-size: calc(1.6 * var(--rem));
       font-weight: 700;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      align-items: center
     }
   }
 
@@ -102,5 +108,13 @@
       width: calc(2.4 * var(--rem));
       height: calc(2.4 * var(--rem));
     }
+
+    @media only screen and (max-width: $bp-md) {
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding: calc(2 * var(--rem)) calc(3 * var(--rem));
   }
 }

@@ -1,0 +1,11 @@
+@import '../../../assets/sass/variables';
+
+
+.signup-form {
+  
+  &__row--center {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+}

@@ -1,4 +1,6 @@
-.root {
+@import '../../../assets/sass/variables';
+
+.page-view {
   /* position: */
   display: flex;
   justify-content: center;
@@ -10,6 +12,16 @@
 
   /* style: */
   background-color: var(--color-green-bold-2);
+
+  @media only screen and (max-width: $bp-md) {
+    padding:  calc(6 * var(--rem));
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    padding:  0;
+  }
 
 }
 
@@ -26,10 +38,23 @@
   border-radius: 20px;
   overflow: hidden;
 
+  @media only screen and (max-width: $bp-md) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    border-radius: 0;
+    max-width: unset;
+    max-height: unset;
+  }
+
 }
 
 .form-container {
   /* position: */
+  display: flex;
+  flex-direction: column;
 
   /* size: */
   flex: 2;
@@ -38,76 +63,13 @@
   /* style: */
   background-color: #fff;
 
-}
-
-.signup-form {
-  /* position: */
-  
-
-  /* size: */
-
-  /* style: */
-
-}
-
-.signup-step-info {
-  /* position: */
-
-  /* size: */
-
-  /* style: */
-  color: var(--color-green-bold-1);
-
-  & > h1 {
-    /* position: */
-  
-    /* size: */
-  
-    /* style: */
-    font-weight: 700;
-  }
-
-  &__step {
-
+  & > .form {
+    flex: 1;
     display: flex;
-
-    margin-top: calc(3.2 * var(--rem));
-    & > p {
-      font-weight: 700;
-      margin-right: calc(1 * var(--rem));
-    }
-    & > div {
-      // height: 1px;
-      display: flex;
-      align-items: center;
-      flex: 1;
-      // height: 100%;
-    }
-    & > div::before {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background-color: var(--color-green-bold-1);
-    }
   }
 
-  & > p {
-    /* position: */
-  
-    /* size: */
-  
-    /* style: */
-    font-style: italic;
-    font-weight: 400;
-
-    & > span {
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    & > span:hover {
-      text-decoration: underline;
-    }
+  @media only screen and (max-width: $bp-md) {
+    padding: calc(4 * var(--rem)) calc(4 * var(--rem));
   }
 
 }
