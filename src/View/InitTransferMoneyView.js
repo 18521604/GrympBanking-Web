@@ -18,6 +18,10 @@ export default function InitTransferMoneyView() {
     const [isShowStatusTransfer, setIsShowStatusTransfer] = useState(false);
     let history = useHistory();
 
+    useEffect(()=>{
+        document.title="Khởi tạo chuyển tiền"
+    }, [])
+
     function changeStatePerson() {
         if (newPerson === "newPerson")
             setIsShowStatusTransfer(true);

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CoverLogin from '../assets/img/CoverLogin.png'
 import CapchaImage from '../assets/img/capcha.png';
 import PhoneIcon from '../assets/icons/phone.png';
+import GrympLogo from '../assets/img/grympLogo.png';
 import { Link, useHistory } from 'react-router-dom';
 
 export default function LoginView(){
     let history = useHistory();
+    useEffect(() => {
+        document.title="Đăng nhập"
+    }, [])
     return(
         <div className="flex bg-background-color w-full min-h-screen justify-center items-center">
             <div className="flex flex-row md:w-8/12 w-5/6">
@@ -14,7 +18,7 @@ export default function LoginView(){
                 </div>
                 <div className="flex flex-col lg:w-1/3 w-full bg-white lg:rounded-r-2xl lg:rounded-l-none rounded-l-xl rounded-r-2xl text-group-color font-body items-center py-7 space-y-3">
                     <div className="flex flex-col w-5/6 items-end space-y-2 md:text-base text-sm mb-4">
-                        <div className="w-1/4 h-10 bg-blue-500">Logo</div>
+                        <img src={GrympLogo} alt="logo" className="w-10 bg-background-color rounded-xl"></img>
                         <text className="font-title text-md">NGÂN HÀNG TRỰC TUYẾN</text>
                         <text className="font-title font-bold">GRYMP E-Banking</text>
                     </div>
