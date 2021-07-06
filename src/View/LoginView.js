@@ -40,7 +40,7 @@ export default function LoginView(){
                     </div>
                     <div className="flex justify-start w-5/6 md:text-sm text-xs space-x-2">
                         <text>Bạn chưa có tài khoản?</text>
-                        <Link to="/signup" className="font-bold transition-all hover:text-background-color">Đăng ký ngay</Link>
+                        <Link to="/signup-step-1" className="font-bold transition-all hover:text-background-color">Đăng ký ngay</Link>
                     </div>
 
                     <div className="w-5/6 h-px bg-group-color"></div>

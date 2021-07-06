@@ -1,0 +1,147 @@
+@import '../../../assets/sass/variables';
+
+.signup-form {
+  /* position: */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  /* size: */
+  
+
+  /* style: */
+
+  &__row {
+    margin-top: calc(2.4 * var(--rem));
+
+    &--mg-1 {
+      margin-top: calc(3.6 * var(--rem));
+    }
+
+    &--mg-2 {
+      margin-top: calc(7.2 * var(--rem));
+    }
+
+    &--mg-3 {
+      margin-top: calc(14.4 * var(--rem));
+    }
+  }
+
+  &__text-field {
+    /* position: */
+    display: flex;
+    align-items: center;
+    /* size: */
+
+    /* style: */
+  
+  }
+
+  &__label {
+    /* position: */
+  
+    /* size: */
+    // flex: 1;
+    width: calc(16 * var(--rem));
+  
+    /* style: */
+    color: var(--color-green-bold-1);
+  }
+
+  &__input {
+    /* position: */
+  
+    /* size: */
+    flex: 2;
+    padding: 0.8em 1.6em;
+  
+    /* style: */
+    border: 1px solid var(--color-green-bold-1);
+    border-radius: calc(1.6 * var(--rem));
+    color: var(--color-green-bold-1);
+
+    &::placeholder {
+      color: var(--color-green-bold-2);
+      font-weight: 300;
+    }
+
+    &:focus {
+      /* position: */
+    
+      /* size: */
+    
+      /* style: */
+      outline: none;
+      background-color: var(--color-green-light-2);
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      padding: 0.6em 1.6em;
+    }
+  }
+
+  &__input--uppercase {
+    text-transform: uppercase;
+  }
+
+  &__validate-icon {
+    /* position: */
+  
+    /* size: */
+    margin-left: calc(1.6 * var(--rem));
+    /* style: */
+  }
+
+  &__action-button {
+    /* position: */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* size: */
+    padding-right: calc(4 * var(--rem));
+  
+    /* style: */
+  
+    @media only screen and (max-width: $bp-md) {
+      margin-top: calc(7.2 * var(--rem));
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      justify-content: space-around;
+      padding-right: 0;
+      margin-top: calc(7.2 * var(--rem));
+    }
+  }
+
+  &__button {
+    /* position: */
+
+    /* size: */
+    min-width: calc(16 * var(--rem));
+    padding: 0.5em 2em;
+    margin-left: calc(1.6 * var(--rem));
+  
+    /* style: */
+    border-radius: 8px;
+    background-color: var(--color-green-light-1);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover {
+      background-color: #00a038;
+    }
+    
+    &--bold {
+      background-color: var(--color-green-bold-1);
+      &:hover {
+        background-color: #04433C;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    font-size: calc(1.4 * var(--rem));
+  }
+}

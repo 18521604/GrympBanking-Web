@@ -1,0 +1,15 @@
+@import '../../../assets/sass/variables';
+
+
+.signup-form {
+  
+  &__help-text {
+    display: flex;
+    justify-content: center;
+    color: var(--color-green-bold-1);
+    & > p > span {
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+}
