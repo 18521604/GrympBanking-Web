@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import AppLogo from '../../assets/icons/phone_in_talk.svg';
+import AppLogo from '../../assets/img/grympLogo.png';
 import PhoneIcon from '../../assets/icons/phone_in_talk.svg';
 
 const SignupNoteBox = () => {
