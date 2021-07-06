@@ -1,7 +1,7 @@
 import React from 'react';
 import SignupNoteBox from '../../../Components/SignupNoteBox/index';
 import SignupStepInfoBox from '../../../Components/SignupStepInfoBox/index';
-import SignupFormSix from '../../../Components/SignupForms/SignupFormSix/index';
+import SignupFormSix from '../../../Components/SignupForms/SignupFormSeven/index';
 
 const SignupStepSixView = () => {
 

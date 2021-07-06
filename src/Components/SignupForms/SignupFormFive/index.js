@@ -44,7 +44,7 @@ const SignupFormFive = () => {
       </div>
       <div className="signup-form__row--mg-2 signup-form__action-button">
         <button className="signup-form__button"
-          onClick={() => history.goBack()}
+          onClick={() => history.push('signup-step-4')}
         >
           Quay lại
         </button>
