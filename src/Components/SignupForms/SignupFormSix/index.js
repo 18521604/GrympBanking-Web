@@ -42,7 +42,7 @@ const SignupFormSix = () => {
       </div>
       <div className="signup-form__row--mg-2 signup-form__action-button">
         <button className="signup-form__button"
-          onClick={() => history.push('signup-step-4')}
+          onClick={() => history.push('signup-step-5')}
         >
           Quay lại
         </button>
