@@ -12,12 +12,12 @@ const SignupFormOne = () => {
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-1" >Họ và tên (*):</label>
         <input className="signup-form__input signup-form__input--uppercase" id="signup-1" placeholder="VD: NGUYEN VAN A" tabIndex={0} />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-2" >Email (*):</label>
         <input className="signup-form__input" id="signup-2" placeholder="VD: grympbank@gmail.com" tabIndex={1} />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-3" >ĐT di động (*):</label>

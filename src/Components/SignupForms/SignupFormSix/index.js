@@ -19,7 +19,7 @@ const SignupFormSix = () => {
             <option value="city-3">Tp. Đà Nẵng</option>
           </select>
         </div>
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-2" >Chi nhánh (*):</label>
@@ -30,7 +30,7 @@ const SignupFormSix = () => {
             <option value="city-3">Quận 2</option>
           </select>
         </div>
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field" >
         <label className="signup-form__label" htmlFor="signup-3" >Mã capcha (*):</label>
@@ -38,7 +38,7 @@ const SignupFormSix = () => {
           <input className="signup-form__input" id="signup-3" placeholder="Nhập Capcha" />
           <img className="signup-form__capcha" alt="capcha" src={CapchaImage} />
         </div>
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row--mg-2 signup-form__action-button">
         <button className="signup-form__button"

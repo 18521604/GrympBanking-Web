@@ -30,17 +30,17 @@ const SignupFormFive = () => {
       <div className="signup-form__row--mg-2 signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-1-name" >SĐT nhận SMS (*):</label>
         <input className="signup-form__input signup-form__input--uppercase" id="signup-1-name" placeholder="VD: 0378678408" tpye="number" />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-1-name" >Tên đăng nhập (*):</label>
         <input className="signup-form__input signup-form__input--uppercase" id="signup-1-name" placeholder="VD: noname" />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-1-name" >Tên in trên thẻ (*): </label>
         <input className="signup-form__input signup-form__input--uppercase" id="signup-1-name" placeholder="VD: NGUYEN VAN A" />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row--mg-2 signup-form__action-button">
         <button className="signup-form__button"
