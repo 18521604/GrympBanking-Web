@@ -12,7 +12,7 @@ const SignupFormSeven = () => {
       <div className="signup-form__row signup-form__text-field">
         <label className="signup-form__label" htmlFor="signup-1" >Mã OTP (*):</label>
         <input className="signup-form__input signup-form__input--uppercase" id="signup-1" placeholder="Nhập mã OTP" />
-        <object className="signup-form__validate-icon" aria-label="check-icon" data={DoneIcon} />
+        <img className="signup-form__validate-icon" aria-label="check-icon" src={DoneIcon} />
       </div>
       <div className="signup-form__row--mg-1 signup-form__help-text">
         <p>Không nhận được mã? <span>Gửi lại</span></p>
