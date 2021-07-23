@@ -1,0 +1,120 @@
+@import '../../assets/sass/variables';
+
+.signup-note {
+  /* position: */
+
+  /* size: */
+  flex: 1;
+  padding: calc(2 * var(--rem)) calc(4 * var(--rem));
+
+  /* style: */
+  background-color: var(--color-green-bold-1);
+  color: #fff;
+
+  &__bank-info {
+    /* position: */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  
+    /* size: */
+  
+  
+    /* style: */
+    & > img {
+      width: calc(3.6 * var(--rem));
+      height: calc(3.6 * var(--rem));
+    }
+
+    & > h1 {
+      /* position: */
+    
+    
+      /* size: */
+      margin-top: calc(1 * var(--rem));
+    
+      /* style: */
+      font-size: calc(1.6 * var(--rem));
+    
+    }
+
+    & > p {
+      /* position: */
+    
+
+      /* size: */
+      margin-top: calc(1 * var(--rem));
+    
+      /* style: */
+      font-size: calc(1.6 * var(--rem));
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      align-items: center
+    }
+  }
+
+  &__content {
+    /* position: */
+  
+    /* size: */
+    margin-top: calc(3.2 * var(--rem));
+  
+    /* style: */
+
+    &__group {
+      /* position: */
+    
+      /* size: */
+    
+      /* style: */
+      & > h2 {
+        /* position: */
+      
+        /* size: */
+        margin-bottom: calc(1 * var(--rem));
+      
+        /* style: */
+        font-weight: 500;
+      }
+
+      & > p:not(:first-child) {
+        /* position: */
+      
+        /* size: */
+        margin-top: calc(1.6 * var(--rem));
+        /* style: */
+        font-size: calc(1.3 * var(--rem));
+        font-weight: 300;
+      }
+    }
+
+    &__group:not(:first-child) {
+      margin-top: calc(3.2 * var(--rem));
+    }
+  }
+
+  &__contact {
+    /* position: */
+    display: flex;
+
+    /* size: */
+    margin-top: calc(3.2 * var(--rem));
+    /* style: */
+    
+    & > img {
+      margin-right: calc(1.6 * var(--rem));
+      width: calc(2.4 * var(--rem));
+      height: calc(2.4 * var(--rem));
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding: calc(2 * var(--rem)) calc(3 * var(--rem));
+  }
+}

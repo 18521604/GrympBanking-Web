@@ -18,6 +18,7 @@ module.exports = {
         'button-color': '#25D366',
         'hover-button-color': '#00a038',
         'group-color': '#075E54',
+        'hover-group-color': '#04433C',
         'background-color': '#128C7E',
         'secondtext-color': '#F4ECEC',
         'icon-color': "#7E7A7A"

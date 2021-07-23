@@ -1,0 +1,85 @@
+@import '../../../assets/sass/variables';
+
+
+.signup-form {
+
+  &__face-reg {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+
+    & > div {
+      height: calc(40 * var(--rem));
+      width: calc(40 * var(--rem));
+      background-color: #C4C4C4;
+      border-radius: 50%;
+    }
+  }
+
+  &__validate-icon  {
+    &--abs {
+      position: absolute;
+      bottom: 0;
+      right: calc(10 * var(--rem));
+    }
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 calc(3.2 * var(--rem));
+  }
+  
+  &__check-box {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 15px;
+
+    & > input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+    }
+
+    & > label {
+      position: relative;
+      cursor: pointer;
+      color: var(--color-green-bold-1);
+    }
+
+    & > label::before {
+      content:'';
+      -webkit-appearance: none;
+      background-color: transparent;
+      
+      border: 2px solid var(--color-green-bold-1);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 8px -12px rgba(0, 0, 0, 0.05);
+      padding: 8px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: calc(1.2 * var(--rem));
+      margin-bottom: 2px;
+    }
+
+    & > input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 7px;
+      width: 6px;
+      height: 14px;
+      border: solid var(--color-green-bold-1);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

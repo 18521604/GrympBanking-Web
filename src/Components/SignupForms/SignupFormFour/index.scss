@@ -1,0 +1,39 @@
+@import '../../../assets/sass/variables';
+
+
+.signup-form {
+
+  &__face-reg {
+    position: relative;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    height: calc(50 * var(--rem));
+
+
+    & > .face-round {
+      position: absolute;
+      z-index: 1;
+      height: calc(35 * var(--rem));
+      width: calc(35 * var(--rem));
+      // overflow: hidden;
+
+      background-color: rgba(0,0,0,0.35);
+      border: 2px solid var(--color-green-bold-2);
+      border-radius: 50%;
+
+      & > .validate-icon-abs {
+        position: absolute;
+        bottom: calc(5 * var(--rem));
+        right: calc(8 * var(--rem));
+        height: 36px;
+        width: 36px;
+        & > svg {
+          fill: var(--color-green-bold-1);
+        }
+      }
+    }
+  }
+}

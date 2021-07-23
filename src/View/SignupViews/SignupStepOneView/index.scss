@@ -1,0 +1,75 @@
+@import '../../../assets/sass/variables';
+
+.page-view {
+  /* position: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* size: */
+  min-height: 100vh;
+  padding: calc(10 * var(--rem));
+
+  /* style: */
+  background-color: var(--color-green-bold-2);
+
+  @media only screen and (max-width: $bp-md) {
+    padding:  calc(6 * var(--rem));
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    padding:  0;
+  }
+
+}
+
+.container {
+  /* position: */
+  display: flex;
+  flex-direction: row;
+
+  /* size: */
+  width: calc(160 * var(--rem));
+  min-height: calc(60 * var(--rem));
+
+  /* style: */
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-md) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    border-radius: 0;
+    max-width: unset;
+    max-height: unset;
+  }
+
+}
+
+.form-container {
+  /* position: */
+  display: flex;
+  flex-direction: column;
+
+  /* size: */
+  flex: 2;
+  padding: calc(4 * var(--rem)) calc(6 * var(--rem));
+
+  /* style: */
+  background-color: #fff;
+
+  & > .form {
+    flex: 1;
+    display: flex;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding: calc(4 * var(--rem)) calc(4 * var(--rem));
+  }
+
+}

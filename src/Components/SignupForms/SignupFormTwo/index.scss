@@ -1,0 +1,42 @@
+@import '../../../assets/sass/variables';
+
+
+.signup-form {
+
+
+  &__identity-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      height: calc(9.6 * var(--rem));
+      width: calc(40 * var(--rem));
+      padding: 0 calc(6 * var(--rem));
+
+      
+      cursor: pointer;
+      border: 1px solid var(--color-green-bold-1);
+      border-radius: 16px;
+
+      &:hover {
+        background-color: var(--color-green-light-2);
+      }
+
+      & > .icon-resize {
+        width: calc(4.8 * var(--rem));
+        height: calc(4.8 * var(--rem));
+      }
+    }
+
+    &--active {
+      & > div {
+        background-color: var(--color-green-light-1);
+      }
+    }
+  }
+}
